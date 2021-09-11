@@ -1,12 +1,9 @@
-import config from "config";
 import express from "express";
 import log from "./logger";
 import routes from "./routes";
 
-const port = config.get<number>('port');
-const host = config.get<string>('host');
-
 const app = express();
+const port = process.env.PORT || 1337;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -16,10 +13,8 @@ app.use((req, res, next) => {
     next();
 });
 
-app.listen(port, host, () => {
-    log.info(`Server listing at http://${host}:${port}`);
+app.listen(port, () => {
+    log.info(`Server listing at PORT:${port}`);
 
-    // connect();
-    //
     routes(app);
 });

@@ -1,7 +1,7 @@
-import getData from "../ds";
 import {Book, BookDocument, documentToBook, documentToSimpleBook, SimpleBook} from "../model/book.model";
+import {Utility} from "../util/utility";
 
-const booksDS: Array<BookDocument> = getData();
+const booksDS: Array<BookDocument> = Utility.readFromFile('dummy-books.json');
 
 export async function getBooks(from: number = 0, to: number = 50): Promise<Array<SimpleBook>> {
     return booksDS.filter(item => item.isbn).slice(from, to).map(documentToSimpleBook);
