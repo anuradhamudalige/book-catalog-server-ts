@@ -2,7 +2,7 @@
 
 This API is created with NodeJS (Typescript). This complete rework for my JS [repository](https://github.com/anuradhamudalige/book-catalog-server) via TS.
 
-##Instructions
+## Instructions
 
 - Clone the repository.
 - Open the `src/app.ts`file and place your book application url which is hosted. Default is pointed to http://localhost:1337
