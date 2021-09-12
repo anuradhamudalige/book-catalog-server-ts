@@ -8,7 +8,7 @@ const port = process.env.PORT || 1337;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://anuradhamudalige.github.io/book-catalog-app/");
+    res.header("Access-Control-Allow-Origin", "https://anuradhamudalige.github.io");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
