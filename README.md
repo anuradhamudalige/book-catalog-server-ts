@@ -1,4 +1,4 @@
-# Book Catalog Server
+## Book Catalog Server
 
 This API is created with NodeJS (Typescript). This complete rework for my JS [repository](https://github.com/anuradhamudalige/book-catalog-server) via TS.
 
