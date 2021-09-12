@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .ts",
     "start": "nodemon --config nodemon.json src/app.ts",
+    "start:heroku": "node dist/app.js",
     "build":"tsc -p ."
   },
   "keywords": [],
